@@ -1,0 +1,15 @@
+<div id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="arabicAlphabet in arabicAlphabets.data" active="arabicAlphabet.active">
+            
+          <img ng-src="img/arabic-alphabet/{{arabicAlphabet.img}}.jpg">
+          <div class="carousel-caption">
+<!--            <h4>Slide {{$index+1}}</h4>-->
+              <h1>{{arabicAlphabet.name}}</h1>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+</div>
+
