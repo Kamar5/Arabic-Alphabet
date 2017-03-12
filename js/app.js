@@ -2,12 +2,15 @@ var app = angular.module("ArabicAlphabetApp", ['ngRoute', 'ui.bootstrap']);
 
 app.config(["$routeProvider", function($routeProvider){
     $routeProvider
-        .when('/', {
+        .when('/all', {
             templateUrl: 'pages/main.html'
         })
         .when('/slide', {
             templateUrl: 'pages/slideView.html'
-        });
+        })
+        .otherwise({
+            redirectTo: '/slide'
+    });
 }]);
 
 
